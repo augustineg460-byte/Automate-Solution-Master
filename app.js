@@ -1,37 +1,62 @@
-const greeting = document.getElementById("greeting");
-const voiceButton = document.getElementById("voiceButton");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Executive | Automate Solutions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <p>Automate Solutions – Powered by OpenAI</p>
+    <h1>Smart Executive</h1>
+    <p>AI Powered. With Infinite Possibilities.</p>
+  </header>
 
-function getGreeting() {
-  const hour = new Date().getHours();
+  <main>
+    <section class="welcome">
+      <h2 id="greeting">Welcome</h2>
+      <p>Your Personal AI Executive Office</p>
+      <button id="voiceButton">🎤 Give a Voice Command</button>
+    </section>
 
-  if (hour < 12) return "Good morning 🙏";
-  if (hour < 17) return "Good afternoon 🙏";
-  return "Good evening 🙏";
-}
+    <section class="dashboard">
+      <article>
+        <h2>Daily Briefing</h2>
+        <p>Appointments, urgent matters, priorities and reminders.</p>
+      </article>
 
-const welcomeMessage =
-  `${getGreeting()} Welcome to Smart Executive, your AI Executive Office.`;
+      <article>
+        <h2>AI Draft Studio</h2>
+        <p>Create, improve, translate and read professional drafts.</p>
+      </article>
 
-if (greeting) {
-  greeting.textContent = welcomeMessage;
-}
+      <article>
+        <h2>Contacts</h2>
+        <p>People, addresses, birthdays and follow-up information.</p>
+      </article>
 
-function speakMessage() {
-  if (!("speechSynthesis" in window)) {
-    alert("Voice guidance is not supported in this browser.");
-    return;
-  }
+      <article>
+        <h2>Reminders</h2>
+        <p>Bills, renewals, insurance and important commitments.</p>
+      </article>
 
-  window.speechSynthesis.cancel();
+      <article>
+        <h2>Quick Search</h2>
+        <p>Find saved information using typing or voice.</p>
+      </article>
 
-  const speech = new SpeechSynthesisUtterance(welcomeMessage);
-  speech.lang = "en-IN";
-  speech.rate = 0.9;
-  speech.pitch = 1;
+      <article>
+        <h2>Ask Smart Executive</h2>
+        <p>Ask questions and receive AI-assisted guidance.</p>
+      </article>
+    </section>
+  </main>
 
-  window.speechSynthesis.speak(speech);
-}
+  <footer>
+    <p>Automate Solutions – Powered by OpenAI</p>
+  </footer>
 
-if (voiceButton) {
-  voiceButton.addEventListener("click", speakMessage);
-}
+  <script src="app.js"></script>
+</body>
+</html>
