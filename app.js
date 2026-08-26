@@ -1,62 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart Executive | Automate Solutions</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <p>Automate Solutions – Powered by OpenAI</p>
-    <h1>Smart Executive</h1>
-    <p>AI Powered. With Infinite Possibilities.</p>
-  </header>
+const greeting = document.getElementById("greeting");
+const voiceButton = document.getElementById("voiceButton");
 
-  <main>
-    <section class="welcome">
-      <h2 id="greeting">Welcome</h2>
-      <p>Your Personal AI Executive Office</p>
-      <button id="voiceButton">🎤 Give a Voice Command</button>
-    </section>
+function getGreeting() {
+  const hour = new Date().getHours();
 
-    <section class="dashboard">
-      <article>
-        <h2>Daily Briefing</h2>
-        <p>Appointments, urgent matters, priorities and reminders.</p>
-      </article>
+  if (hour < 12) return "Good morning 🙏";
+  if (hour < 17) return "Good afternoon 🙏";
+  return "Good evening 🙏";
+}
 
-      <article>
-        <h2>AI Draft Studio</h2>
-        <p>Create, improve, translate and read professional drafts.</p>
-      </article>
+const welcomeMessage =
+  `${getGreeting()} Welcome to Smart Executive, your AI Executive Office.`;
 
-      <article>
-        <h2>Contacts</h2>
-        <p>People, addresses, birthdays and follow-up information.</p>
-      </article>
+if (greeting) {
+  greeting.textContent = welcomeMessage;
+}
 
-      <article>
-        <h2>Reminders</h2>
-        <p>Bills, renewals, insurance and important commitments.</p>
-      </article>
+function speakMessage() {
+  if (!("speechSynthesis" in window)) {
+    alert("Voice guidance is not supported by this browser.");
+    return;
+  }
 
-      <article>
-        <h2>Quick Search</h2>
-        <p>Find saved information using typing or voice.</p>
-      </article>
+  const synth = window.speechSynthesis;
+  synth.cancel();
 
-      <article>
-        <h2>Ask Smart Executive</h2>
-        <p>Ask questions and receive AI-assisted guidance.</p>
-      </article>
-    </section>
-  </main>
+  const speech = new SpeechSynthesisUtterance(welcomeMessage);
+  speech.lang = "en-IN";
+  speech.rate = 0.85;
+  speech.pitch = 1;
+  speech.volume = 1;
 
-  <footer>
-    <p>Automate Solutions – Powered by OpenAI</p>
-  </footer>
+  const voices = synth.getVoices();
+  const preferredVoice =
+    voices.find((voice) => voice.lang === "en-IN") ||
+    voices.find((voice) => voice.lang.startsWith("en-GB")) ||
+    voices.find((voice) => voice.lang.startsWith("en"));
 
-  <script src="app.js"></script>
-</body>
-</html>
+  if (preferredVoice) {
+    speech.voice = preferredVoice;
+  }
+
+  speech.onstart = () => {
+    voiceButton.textContent = "🔊 Speaking…";
+  };
+
+  speech.onend = () => {
+    voiceButton.textContent = "🎤 Give a Voice Command";
+  };
+
+  speech.onerror = () => {
+    voiceButton.textContent = "🎤 Give a Voice Command";
+    alert("Voice could not play. Please check the laptop volume and confirm that this browser tab is not muted.");
+  };
+
+  setTimeout(() => {
+    synth.resume();
+    synth.speak(speech);
+  }, 150);
+}
+
+if ("speechSynthesis" in window) {
+  window.speechSynthesis.getVoices();
+  window.speechSynthesis.onvoiceschanged = () => {
+    window.speechSynthesis.getVoices();
+  };
+}
+
+if (voiceButton) {
+  voiceButton.addEventListener("click", speakMessage);
+}
