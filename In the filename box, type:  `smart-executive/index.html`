@@ -1,0 +1,43 @@
+Now click inside the large editing area and paste this:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Executive | Automate Solutions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <p>Automate Solutions – Powered by OpenAI</p>
+    <h1>Smart Executive</h1>
+    <p>AI Powered. With Infinite Possibilities.</p>
+  </header>
+
+  <main>
+    <section class="welcome">
+      <h2 id="greeting">Welcome</h2>
+      <p>Your personal AI Executive Office</p>
+      <button id="voiceButton">🎤 Give a Voice Command</button>
+    </section>
+
+    <section class="dashboard">
+      <article><h3>Daily Briefing</h3><p>Appointments, priorities and reminders</p></article>
+      <article><h3>Personal Command Centre</h3><p>Type or speak what you need</p></article>
+      <article><h3>AI Draft Studio</h3><p>Create letters, emails and messages</p></article>
+      <article><h3>People & Records</h3><p>Contacts, birthdays and important information</p></article>
+      <article><h3>Bills & Renewals</h3><p>Track payments, insurance and renewals</p></article>
+      <article><h3>Ask Smart Executive</h3><p>Get AI-assisted answers and guidance</p></article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Private pilot for the Owner/Promoter of Automate Solutions</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+```
