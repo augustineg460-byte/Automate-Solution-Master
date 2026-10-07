@@ -1,0 +1,30 @@
+{
+  "name": "Madhav Netralaya - Premium 5.8 Acre Eye Hospital - Nagpur",
+  "short_name": "Madhav Netralaya",
+  "description": "Madhav Netralaya - 5.8 Acre Premium Eye-Shaped Campus - 250-Bed - 14 OPDs - 14 OTs - 2 Hospitals + Research - Low Vision 11-1 Daily - Blind Students Voice - Community Sewa Ayushman - Talk to Book - Token L vs O - Pay Advance - Map Auto 8km - Lifetime Free Seva by Automate Solutions Global - Service First",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f0f7ff",
+  "theme_color": "#0d4d8a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
