@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Madhav Netralaya - Eye Hospital - Free Seva - 5.8 Acre Premium</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0d4d8a">
+<link rel="icon" href="icons/icon-192.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}body{background:#f0f7ff}header{background:#0d4d8a;color:#fff;padding:12px;text-align:center}header h1{font-size:22px}header p{font-size:12px;opacity:.9}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px}.tile{background:#fff;border-radius:14px;padding:16px;text-align:center;box-shadow:0 2px 8px #0001;border-left:5px solid #0d4d8a}.tile b{display:block;font-size:15px;color:#0d4d8a}.tile span{font-size:11px;color:#555}button{width:100%;margin-top:8px;padding:8px;background:#0d4d8a;color:#fff;border:0;border-radius:8px}.banner{background:#fff3cd;padding:10px;text-align:center;font-size:12px;border:1px solid #ffe69c}.footer{text-align:center;padding:10px;font-size:10px;color:#666}
+</style>
+</head>
+<body>
+<header>
+<h1>👁️ Madhav Netralaya - माधव नेत्रालय</h1>
+<p>5.8 Acre Premium Eye Campus | 250-Bed | 14 OPDs | 14 OTs | 2 Hospitals + Research | Nagpur</p>
+<p>Lifetime Free Seva by Automate Solutions Global - Service First - Eye Care Must Reach Doorsteps Of Needy</p>
+</header>
+<div class="banner">📢 Low Vision Aid Daily 11-1 | Blind Students Voice Support | Community Sewa Ayushman Bharat | Talk to Book Facility | Token L vs O (No Compromise Architecture) | Pay Advance or Pay at Counter | Map Auto 8km</div>
+<div class="grid">
+<div class="tile"><b>OPD Booking</b><span>14 OPDs - Eye Check</span><button onclick="speak('OPD Booking - Choose OPD')">🔊 Voice</button><button onclick="alert('OPD Booking - Demo - Select OPD 1-14 - Tomorrow official list')">Book Now</button></div>
+<div class="tile"><b>Low Vision 11-1</b><span>Daily Free Aid - Blind Students</span><button onclick="speak('Low Vision Aid Daily 11 to 1')">🔊 Voice</button><button onclick="alert('Low Vision Token - Daily 11-1 - Demo')">Get Token L</button></div>
+<div class="tile"><b>Community Sewa</b><span>Ayushman Bharat - Free Camp</span><button onclick="speak('Community Sewa Ayushman Bharat')">🔊 Voice</button><button onclick="alert('Community Sewa - Ayushman - Demo')">Apply</button></div>
+<div class="tile"><b>Talk to Book</b><span>Voice hi-IN en-IN - Senior Citizen</span><button onclick="speak('Talk to Book - Boliye - OPD book karein')">🔊 Talk</button><button onclick="alert('Talk to Book - Voice Booking Demo - hi-IN en-IN')">Start Voice</button></div>
+<div class="tile"><b>Pay Advance</b><span>Razorpay / Pay at Counter</span><button onclick="alert('Pay Advance - Razorpay Live Key Later - Now Pay at Counter Option')">Pay ₹</button></div>
+<div class="tile"><b>Map Auto 8km</b><span>Auto 8km Radius - Premium Eye Campus Map</span><button onclick="alert('Map Auto 8km - Eye-shaped Premium Centre - Demo')">View Map</button></div>
+<div class="tile"><b>My Tokens</b><span>Token L = Low Vision, O = OPD - No Confusion</span><button onclick="alert('My Tokens - L vs O - Demo - Token Display')">My Tokens</button></div>
+<div class="tile"><b>My History</b><span>Past OPDs + Bills + Reports</span><button onclick="alert('My History - Demo')">History</button></div>
+</div>
+<div class="footer">Madhav Netralaya - 5.8 Acre Eye-Shaped Premium Centre Nagpur | Draft PWA | Interactive Multilingual Accessible Inclusive Equal Opportunity Architecture - No Compromise - Automate Solutions Global - Lifetime Free Seva - Jai Shriram<br>Subfolder: automatesolution.in/madhav-netralaya/ | Hosted on Automate Solutions Host | PWA Add to Home Screen Works | Official Logo Later When Directors Give High-Res PNG</div>
+<script>
+function speak(t){if('speechSynthesis' in window){let u=new SpeechSynthesisUtterance(t);u.lang='hi-IN';speechSynthesis.speak(u);}else alert(t)}
+if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js')}
+</script>
+</body>
+</html>
